@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Your Name | Graphic Design Portfolio</title>
+
+    <style>
+        /* =========================
+           GENERAL STYLING
+        ========================== */
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Georgia", serif;
+            background: #f7f5f1;
+            color: #292725;
+            line-height: 1.6;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        /* =========================
+           NAVIGATION
+        ========================== */
+
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            padding: 20px 7%;
+
+            background: rgba(247, 245, 241, 0.95);
+            border-bottom: 1px solid #ddd8d0;
+        }
+
+        .logo {
+            font-size: 1.4rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+            font-family: Arial, sans-serif;
+            font-size: 0.9rem;
+        }
+
+        nav a:hover {
+            opacity: 0.55;
+        }
+
+        /* =========================
+           HERO
+        ========================== */
+
+        .hero {
+            min-height: 70vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+
+            padding: 80px 20px;
+        }
+
+        .hero h1 {
+            font-size: clamp(3rem, 8vw, 6rem);
+            font-weight: normal;
+            letter-spacing: -2px;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            max-width: 600px;
+            font-family: Arial, sans-serif;
+            font-size: 1rem;
+            color: #69645e;
+        }
+
+        .hero-button {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 12px 28px;
+
+            border: 1px solid #292725;
+            font-family: Arial, sans-serif;
+            font-size: 0.85rem;
+
+            transition: 0.2s ease;
+        }
+
+        .hero-button:hover {
+            background: #292725;
+            color: #f7f5f1;
+        }
+
+        /* =========================
+           ABOUT SECTION
+        ========================== */
+
+        .about {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 100px 30px 80px;
+            text-align: center;
+        }
+
+        .section-label {
+            font-family: Arial, sans-serif;
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: #8a837b;
+            margin-bottom: 15px;
+        }
+
+        .about h2,
+        .portfolio h2,
+        .contact h2 {
+            font-size: 2.5rem;
+            font-weight: normal;
+            margin-bottom: 25px;
+        }
+
+        .about p {
+            max-width: 700px;
+            margin: auto;
+            font-size: 1.05rem;
+            color: #5d5954;
+        }
+
+        /* =========================
+           PORTFOLIO GALLERY
+        ========================== */
+
+        .portfolio {
+            padding: 80px 7% 120px;
+        }
+
+        .portfolio-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .project {
+            position: relative;
+            overflow: hidden;
+            background: #e8e4dd;
+        }
+
+        .project img {
+            width: 100%;
+            height: 420px;
+            display: block;
+            object-fit: cover;
+
+            transition: transform 0.4s ease;
+        }
+
+        .project:hover img {
+            transform: scale(1.03);
+        }
+
+        .project-info {
+            padding: 18px 5px;
+        }
+
+        .project-info h3 {
+            font-size: 1.2rem;
+            font-weight: normal;
+        }
+
+        .project-info p {
+            font-family: Arial, sans-serif;
+            font-size: 0.8rem;
+            color: #827c75;
+            margin-top: 3px;
+        }
+
+        /* =========================
+           CONTACT
+        ========================== */
+
+        .contact {
+            background: #292725;
+            color: #f7f5f1;
+            text-align: center;
+            padding: 110px 30px;
+        }
+
+        .contact .section-label {
+            color: #aaa49c;
+        }
+
+        .contact h2 {
+            font-size: 3rem;
+        }
+
+        .contact p {
+            max-width: 550px;
+            margin: 0 auto 30px;
+            color: #c9c4bd;
+            font-family: Arial, sans-serif;
+        }
+
+        .contact-button {
+            display: inline-block;
+            padding: 13px 30px;
+            border: 1px solid #f7f5f1;
+
+            font-family: Arial, sans-serif;
+            font-size: 0.85rem;
+
+            transition: 0.2s ease;
+        }
+
+        .contact-button:hover {
+            background: #f7f5f1;
+            color: #292725;
+        }
+
+        /* =========================
+           FOOTER
+        ========================== */
+
+        footer {
+            background: #292725;
+            color: #88837d;
+            text-align: center;
+            padding: 25px;
+            font-family: Arial, sans-serif;
+            font-size: 0.75rem;
+        }
+
+        /* =========================
+           MOBILE
+        ========================== */
+
+        @media (max-width: 700px) {
+
+            nav {
+                padding: 18px 5%;
+            }
+
+            nav ul {
+                gap: 15px;
+            }
+
+            .hero {
+                min-height: 60vh;
+            }
+
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+
+            .project img {
+                height: 350px;
+            }
+
+            .about,
+            .portfolio {
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+        }
+    </style>
+</head>
+
+
+<body>
+
+    <!-- =========================
+         NAVIGATION
+    ========================== -->
+
+    <nav>
+        <a href="#" class="logo">YOUR NAME</a>
+
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+
+    <!-- =========================
+         HERO
+    ========================== -->
+
+    <header class="hero">
+
+        <h1>Graphic Design</h1>
+
+        <p>
+            Thoughtful, creative design created to help ideas
+            stand out and connect with people.
+        </p>
+
+        <a href="#portfolio" class="hero-button">
+            View My Work
+        </a>
+
+    </header>
+
+
+    <!-- =========================
+         ABOUT ME
+    ========================== -->
+
+    <section class="about" id="about">
+
+        <div class="section-label">About Me</div>
+
+        <h2>Creating with purpose.</h2>
+
+        <p>
+            Hi, I'm <strong>Your Name</strong>, a graphic designer
+            passionate about turning ideas into meaningful visual
+            experiences. I enjoy creating thoughtful designs that
+            are both beautiful and purposeful, from branding and
+            promotional materials to digital graphics and
+            illustrations. My goal is to create work that feels
+            authentic to each client while helping their message
+            make a lasting impression.
+        </p>
+
+    </section>
+
+
+    <!-- =========================
+         PORTFOLIO
+    ========================== -->
+
+    <section class="portfolio" id="portfolio">
+
+        <div class="portfolio-header">
+
+            <div class="section-label">Selected Work</div>
+
+            <h2>My Portfolio</h2>
+
+        </div>
+
+
+        <div class="gallery">
+
+            <!-- PROJECT 1 -->
+
+            <div class="project">
+
+                <img
+                    src="images/project-1.jpg"
+                    alt="Graphic design project"
+                >
+
+                <div class="project-info">
+                    <h3>Project One</h3>
+                    <p>Branding & Visual Identity</p>
+                </div>
+
+            </div>
+
+
+            <!-- PROJECT 2 -->
+
+            <div class="project">
+
+                <img
+                    src="images/project-2.jpg"
+                    alt="Graphic design project"
+                >
+
+                <div class="project-info">
+                    <h3>Project Two</h3>
+                    <p>Print & Promotional Design</p>
+                </div>
+
+            </div>
+
+
+            <!-- PROJECT 3 -->
+
+            <div class="project">
+
+                <img
+                    src="images/project-3.jpg"
+                    alt="Graphic design project"
+                >
+
+                <div class="project-info">
+                    <h3>Project Three</h3>
+                    <p>Digital Design</p>
+                </div>
+
+            </div>
+
+
+            <!-- PROJECT 4 -->
+
+            <div class="project">
+
+                <img
+                    src="images/project-4.jpg"
+                    alt="Graphic design project"
+                >
+
+                <div class="project-info">
+                    <h3>Project Four</h3>
+                    <p>Illustration</p>
+                </div>
+
+            </div>
+
+
+            <!-- PROJECT 5 -->
+
+            <div class="project">
+
+                <img
+                    src="images/project-5.jpg"
+                    alt="Graphic design project"
+                >
+
+                <div class="project-info">
+                    <h3>Project Five</h3>
+                    <p>Social Media Design</p>
+                </div>
+
+            </div>
+
+
+            <!-- PROJECT 6 -->
+
+            <div class="project">
+
+                <img
+                    src="images/project-6.jpg"
+                    alt="Graphic design project"
+                >
+
+                <div class="project-info">
+                    <h3>Project Six</h3>
+                    <p>Creative Direction</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         CONTACT
+    ========================== -->
+
+    <section class="contact" id="contact">
+
+        <div class="section-label">Contact Me</div>
+
+        <h2>Let's work together.</h2>
+
+        <p>
+            Have a project in mind? I'd love to hear about it.
+            Get in touch and let's create something meaningful
+            together.
+        </p>
+
+        <a
+            href="mailto:youremail@example.com"
+            class="contact-button"
+        >
+            Email Me
+        </a>
+
+    </section>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+        © 2026 Your Name. All rights reserved.
+    </footer>
+
+</body>
+</html>
