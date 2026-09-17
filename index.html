@@ -1,85 +1,1126 @@
-<p>&nbsp;</p>
-<!-- =========================
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ✏️ CHANGE YOUR WEBSITE TITLE HERE -->
+    <title>Jeane | Graphic Designer</title>
+
+
+    <style>
+
+        /* =====================================================
+           GENERAL PAGE SETTINGS
+        ===================================================== */
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Georgia, "Times New Roman", serif;
+            background: #f6f4f0;
+            color: #292725;
+            line-height: 1.6;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+
+        /* =====================================================
+           NAVIGATION
+        ===================================================== */
+
+        nav {
+            width: 100%;
+            padding: 22px 6%;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            border-bottom: 1px solid #ddd9d2;
+
+            background: #f6f4f0;
+        }
+
+        /* ✏️ CHANGE YOUR NAME HERE */
+
+        .logo {
+            font-size: 1.25rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        nav ul {
+            list-style: none;
+
+            display: flex;
+            gap: 28px;
+
+            font-family: Arial, sans-serif;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        nav a:hover {
+            opacity: 0.55;
+        }
+
+
+        /* =====================================================
+           HERO / FIRST IMPRESSION
+        ===================================================== */
+
+        .hero {
+            min-height: 75vh;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            text-align: center;
+
+            padding: 80px 25px;
+        }
+
+        .hero-small {
+            font-family: Arial, sans-serif;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+
+            color: #827c75;
+
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            max-width: 950px;
+
+            font-size: clamp(3.5rem, 9vw, 7rem);
+
+            font-weight: normal;
+            line-height: 0.95;
+
+            letter-spacing: -4px;
+
+            margin-bottom: 30px;
+        }
+
+        .hero p {
+            max-width: 580px;
+
+            font-family: Arial, sans-serif;
+            font-size: 1rem;
+
+            color: #6b665f;
+        }
+
+        .hero-button {
+            margin-top: 35px;
+
+            padding: 13px 30px;
+
+            border: 1px solid #292725;
+
+            font-family: Arial, sans-serif;
+            font-size: 0.8rem;
+
+            text-transform: uppercase;
+            letter-spacing: 1px;
+
+            transition: all 0.25s ease;
+        }
+
+        .hero-button:hover {
+            background: #292725;
+            color: #f6f4f0;
+        }
+
+
+        /* =====================================================
+           ABOUT ME
+        ===================================================== */
+
+        .about {
+            max-width: 850px;
+
+            margin: auto;
+
+            padding: 100px 30px;
+
+            text-align: center;
+        }
+
+        .section-label {
+            font-family: Arial, sans-serif;
+
+            font-size: 0.7rem;
+
+            text-transform: uppercase;
+
+            letter-spacing: 3px;
+
+            color: #8a847c;
+
+            margin-bottom: 15px;
+        }
+
+        .about h2,
+        .portfolio-heading h2,
+        .contact h2 {
+
+            font-size: 2.7rem;
+
+            font-weight: normal;
+
+            line-height: 1.1;
+
+            margin-bottom: 25px;
+        }
+
+        .about p {
+
+            max-width: 700px;
+
+            margin: auto;
+
+            font-size: 1.05rem;
+
+            color: #5e5953;
+        }
+
+
+        /* =====================================================
+           PORTFOLIO GALLERY
+        ===================================================== */
+
+        .portfolio {
+
+            padding: 90px 6% 120px;
+
+        }
+
+        .portfolio-heading {
+
+            text-align: center;
+
+            margin-bottom: 55px;
+
+        }
+
+        .portfolio-heading p {
+
+            max-width: 550px;
+
+            margin: auto;
+
+            font-family: Arial, sans-serif;
+
+            font-size: 0.9rem;
+
+            color: #77716a;
+
+        }
+
+
+        /* Gallery grid */
+
+        .gallery {
+
+            max-width: 1200px;
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns: repeat(2, 1fr);
+
+            gap: 35px;
+
+        }
+
+
+        /* Individual gallery item */
+
+        .gallery-item {
+
+            cursor: pointer;
+
+        }
+
+
+        /* Thumbnail */
+
+        .thumbnail {
+
+            width: 100%;
+
+            height: 400px;
+
+            overflow: hidden;
+
+            background: #e6e1da;
+
+        }
+
+        .thumbnail img {
+
+            width: 100%;
+
+            height: 100%;
+
+            object-fit: cover;
+
+            display: block;
+
+            transition: transform 0.5s ease;
+
+        }
+
+        .gallery-item:hover .thumbnail img {
+
+            transform: scale(1.04);
+
+        }
+
+
+        /* Text below thumbnail */
+
+        .gallery-info {
+
+            padding-top: 15px;
+
+        }
+
+        .gallery-info h3 {
+
+            font-size: 1.25rem;
+
+            font-weight: normal;
+
+        }
+
+        .gallery-info p {
+
+            margin-top: 3px;
+
+            font-family: Arial, sans-serif;
+
+            font-size: 0.75rem;
+
+            color: #817b74;
+
+        }
+
+
+        /* =====================================================
+           FULL-SIZE IMAGE POPUP
+        ===================================================== */
+
+        .lightbox {
+
+            display: none;
+
+            position: fixed;
+
+            z-index: 1000;
+
+            left: 0;
+
+            top: 0;
+
+            width: 100%;
+
+            height: 100%;
+
+            background: rgba(25, 24, 22, 0.94);
+
+            padding: 40px;
+
+            overflow-y: auto;
+
+        }
+
+
+        /* Popup content */
+
+        .lightbox-content {
+
+            max-width: 1000px;
+
+            margin: 40px auto;
+
+            text-align: center;
+
+            color: #f6f4f0;
+
+        }
+
+
+        .lightbox-content img {
+
+            max-width: 100%;
+
+            max-height: 70vh;
+
+            object-fit: contain;
+
+        }
+
+
+        .lightbox-title {
+
+            margin-top: 25px;
+
+            font-size: 2rem;
+
+            font-weight: normal;
+
+        }
+
+
+        .lightbox-description {
+
+            max-width: 650px;
+
+            margin: 10px auto 0;
+
+            font-family: Arial, sans-serif;
+
+            font-size: 0.9rem;
+
+            color: #c8c3bc;
+
+        }
+
+
+        /* Close button */
+
+        .close-button {
+
+            position: fixed;
+
+            top: 25px;
+
+            right: 35px;
+
+            color: white;
+
+            font-family: Arial, sans-serif;
+
+            font-size: 2rem;
+
+            cursor: pointer;
+
+            font-weight: normal;
+
+        }
+
+        .close-button:hover {
+
+            opacity: 0.6;
+
+        }
+
+
+        /* =====================================================
+           CONTACT SECTION
+        ===================================================== */
+
+        .contact {
+
+            background: #292725;
+
+            color: #f6f4f0;
+
+            text-align: center;
+
+            padding: 120px 25px;
+
+        }
+
+        .contact .section-label {
+
+            color: #aaa49d;
+
+        }
+
+        .contact h2 {
+
+            font-size: 3.5rem;
+
+        }
+
+        .contact p {
+
+            max-width: 550px;
+
+            margin: auto auto 30px;
+
+            font-family: Arial, sans-serif;
+
+            color: #c8c3bc;
+
+        }
+
+        .contact-button {
+
+            display: inline-block;
+
+            padding: 14px 32px;
+
+            border: 1px solid #f6f4f0;
+
+            font-family: Arial, sans-serif;
+
+            font-size: 0.8rem;
+
+            text-transform: uppercase;
+
+            letter-spacing: 1px;
+
+            transition: all 0.25s ease;
+
+        }
+
+        .contact-button:hover {
+
+            background: #f6f4f0;
+
+            color: #292725;
+
+        }
+
+
+        /* =====================================================
+           FOOTER
+        ===================================================== */
+
+        footer {
+
+            background: #292725;
+
+            color: #858078;
+
+            text-align: center;
+
+            padding: 25px;
+
+            font-family: Arial, sans-serif;
+
+            font-size: 0.7rem;
+
+        }
+
+
+        /* =====================================================
+           MOBILE PHONE DISPLAY
+        ===================================================== */
+
+        @media (max-width: 700px) {
+
+            nav {
+
+                padding: 18px 5%;
+
+            }
+
+            nav ul {
+
+                gap: 15px;
+
+                font-size: 0.65rem;
+
+            }
+
+            .hero {
+
+                min-height: 65vh;
+
+            }
+
+            .hero h1 {
+
+                letter-spacing: -2px;
+
+            }
+
+            .gallery {
+
+                grid-template-columns: 1fr;
+
+            }
+
+            .thumbnail {
+
+                height: 350px;
+
+            }
+
+            .lightbox {
+
+                padding: 20px;
+
+            }
+
+            .lightbox-title {
+
+                font-size: 1.5rem;
+
+            }
+
+            .contact h2 {
+
+                font-size: 2.6rem;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
          NAVIGATION
-    ========================== --><nav><a class="logo" href="#">Graphics by Jeane</a>
-<ul>
-<li><a href="#about">About</a></li>
-<li><a href="#portfolio">Portfolio</a></li>
-<li><a href="#contact">Contact</a></li>
-</ul>
-</nav><!-- =========================
+    ===================================================== -->
+
+    <nav>
+
+        <!-- ✏️ CHANGE YOUR NAME HERE -->
+
+        <div class="logo">
+            Graphics by Jeane
+        </div>
+
+        <ul>
+
+            <li>
+                <a href="#about">About</a>
+            </li>
+
+            <li>
+                <a href="#portfolio">Work</a>
+            </li>
+
+            <li>
+                <a href="#contact">Contact</a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+
+    <!-- =====================================================
          HERO
-    ========================== --><header class="hero">
-<h1>Your Brand Identity</h1>
-<p>I specialize in helping small business owners find their own custom <em>brand identity</em>.&nbsp;A cohesive brand identity creates a recognizable and professional online presence that builds trust, strengthens credibility, and helps your business stand out.</p>
-<p>&nbsp;</p>
-<p>My complete graphic design package includes your own logo, website graphics, company headers, social media icons, business cards, advert design, and more, all custom made based on your preferences and vision for how you want your business to be seen by your potential clients.</p>
-<a class="hero-button" href="#portfolio"> View My Work </a></header><!-- =========================
+    ===================================================== -->
+
+    <section class="hero">
+
+        <div class="hero-small">
+            Graphic Designer
+        </div>
+
+
+        <!-- ✏️ CHANGE YOUR MAIN HEADLINE HERE -->
+
+        <h1>
+            Let's find your<br>Brand Identity
+        </h1>
+
+
+        <!-- ✏️ CHANGE YOUR INTRODUCTION HERE -->
+
+        <p>
+            I specialize in helping small business owners find their own custom brand identity. A cohesive brand identity creates a recognizable and professional online presence that builds trust, strengthens credibility, and helps your business stand out. My complete graphic design package includes your own logo, website graphics, company headers, social media icons, business cards, advert design, and more, all custom made based on your preferences and vision for how you want your business to be seen by your potential clients.
+        </p>
+
+
+        <a href="#portfolio" class="hero-button">
+            Explore My Work
+        </a>
+
+    </section>
+
+
+    <!-- =====================================================
          ABOUT ME
-    ========================== -->
-<div class="section-label">About Me</div>
-<h2 class="about">Happy to work with you!</h2>
-<p>Hi, I'm <strong>Jeane</strong>, a Graphic Design graduate passionate about turning your ideas into meaningful custom imagery for your growing business. I enjoy creating thoughtful designs that are both beautiful and purposeful, from branding and promotional materials to digital graphics and illustrations. My goal is to boost traffic to small businesses by creating identifyable branding that fits the mission of each client while helping their business make a lasting impression.</p>
-<!-- =========================
+    ===================================================== -->
+
+    <section class="about" id="about">
+
+        <div class="section-label">
+            About Me
+        </div>
+
+
+        <h2>
+            Creativity with purpose.
+        </h2>
+
+
+        <!-- ✏️ CHANGE YOUR ABOUT ME DESCRIPTION HERE -->
+
+        <p>
+            Hi, I'm Jeane, a Graphic Design graduate passionate about working with small businesses to help them grow. I enjoy creating thoughtful designs that are both beautiful and purposeful, from branding and promotional materials to digital graphics and illustrations. My goal is to boost traffic to small businesses by creating identifyable branding that fits the mission of each business while helping them make a lasting impression on their clients.
+        </p>
+
+    </section>
+
+
+    <!-- =====================================================
          PORTFOLIO
-    ========================== -->
-<section id="portfolio" class="portfolio">
-<div class="portfolio-header">
-<div class="section-label">Selected Work</div>
-<h2>My Portfolio</h2>
-</div>
-<div class="gallery"><!-- PROJECT 1 -->
-<div class="project"><img src="images/project-1.jpg" alt="Graphic design project" />
-<div class="project-info">
-<h3>Logo Art</h3>
-<p>Branding &amp; Visual Identity</p>
-</div>
-</div>
-<!-- PROJECT 2 -->
-<div class="project"><img src="images/project-2.jpg" alt="Graphic design project" />
-<div class="project-info">
-<h3>Business Cards, brochures, posters, and more!</h3>
-<p>Print &amp; Promotional Design</p>
-</div>
-</div>
-<!-- PROJECT 3 -->
-<div class="project"><img src="images/project-3.jpg" alt="Graphic design project" />
-<div class="project-info">
-<h3>Website and Email Company Graphics</h3>
-<p>Digital Design</p>
-</div>
-</div>
-<!-- PROJECT 4 -->
-<div class="project"><img src="images/project-4.jpg" alt="Graphic design project" />
-<div class="project-info">
-<h3>Project Four</h3>
-<p>Illustration</p>
-</div>
-</div>
-<!-- PROJECT 5 -->
-<div class="project"><img src="images/project-5.jpg" alt="Graphic design project" />
-<div class="project-info">
-<h3>Social Media icons, ads, banners, posts, and more!</h3>
-<p>Social Media Design</p>
-</div>
-</div>
-<!-- PROJECT 6 -->
-<div class="project"><img src="images/project-6.jpg" alt="Graphic design project" />
-<div class="project-info">
-<h3>Custom&nbsp;</h3>
-<p>Creative Direction</p>
-</div>
-</div>
-</div>
-</section>
-<!-- =========================
-         CONTACT
-    ========================== -->
-<section id="contact" class="contact">
-<div class="section-label">Contact Me</div>
-<h2>Let's work together.</h2>
-<p>Have a project in mind? I'd love to hear about it. <br />Get in touch and let's create something meaningful together.</p>
-<a class="contact-button" href="mailto:teamleader.jeane@gmail.com"> Email Me </a></section>
-<!-- =========================
+    ===================================================== -->
+
+    <section class="portfolio" id="portfolio">
+
+
+        <div class="portfolio-heading">
+
+            <div class="section-label">
+                Selected Work
+            </div>
+
+
+            <h2>
+                A selection of my work.
+            </h2>
+
+
+            <p>
+                Explore some of my recent design projects.
+                Click any project to view it in full.
+            </p>
+
+        </div>
+
+
+        <div class="gallery">
+
+
+            <!-- =================================================
+                 PROJECT 1
+            ================================================= -->
+
+            <!-- ✏️ Change the image, title, and description -->
+
+            <div
+                class="gallery-item"
+                onclick="openLightbox(
+                    'images/project-1.jpg',
+                    'Project One',
+                    'A short description of this design project and the goals behind it.'
+                )"
+            >
+
+                <div class="thumbnail">
+
+                    <img
+                        src="images/project-1.jpg"
+                        alt="Project One"
+                    >
+
+                </div>
+
+
+                <div class="gallery-info">
+
+                    <h3>
+                        Project One
+                    </h3>
+
+                    <p>
+                        Branding & Visual Identity
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 PROJECT 2
+            ================================================= -->
+
+            <!-- ✏️ Change the image, title, and description -->
+
+            <div
+                class="gallery-item"
+                onclick="openLightbox(
+                    'images/project-2.jpg',
+                    'Project Two',
+                    'A short description of this design project and the goals behind it.'
+                )"
+            >
+
+                <div class="thumbnail">
+
+                    <img
+                        src="images/project-2.jpg"
+                        alt="Project Two"
+                    >
+
+                </div>
+
+
+                <div class="gallery-info">
+
+                    <h3>
+                        Project Two
+                    </h3>
+
+                    <p>
+                        Print Design
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 PROJECT 3
+            ================================================= -->
+
+            <div
+                class="gallery-item"
+                onclick="openLightbox(
+                    'images/project-3.jpg',
+                    'Project Three',
+                    'A short description of this design project and the goals behind it.'
+                )"
+            >
+
+                <div class="thumbnail">
+
+                    <img
+                        src="images/project-3.jpg"
+                        alt="Project Three"
+                    >
+
+                </div>
+
+
+                <div class="gallery-info">
+
+                    <h3>
+                        Project Three
+                    </h3>
+
+                    <p>
+                        Digital Design
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 PROJECT 4
+            ================================================= -->
+
+            <div
+                class="gallery-item"
+                onclick="openLightbox(
+                    'images/project-4.jpg',
+                    'Project Four',
+                    'A short description of this design project and the goals behind it.'
+                )"
+            >
+
+                <div class="thumbnail">
+
+                    <img
+                        src="images/project-4.jpg"
+                        alt="Project Four"
+                    >
+
+                </div>
+
+
+                <div class="gallery-info">
+
+                    <h3>
+                        Project Four
+                    </h3>
+
+                    <p>
+                        Illustration
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 PROJECT 5
+            ================================================= -->
+
+            <div
+                class="gallery-item"
+                onclick="openLightbox(
+                    'images/project-5.jpg',
+                    'Project Five',
+                    'A short description of this design project and the goals behind it.'
+                )"
+            >
+
+                <div class="thumbnail">
+
+                    <img
+                        src="images/project-5.jpg"
+                        alt="Project Five"
+                    >
+
+                </div>
+
+
+                <div class="gallery-info">
+
+                    <h3>
+                        Project Five
+                    </h3>
+
+                    <p>
+                        Social Media Design
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 PROJECT 6
+            ================================================= -->
+
+            <div
+                class="gallery-item"
+                onclick="openLightbox(
+                    'images/project-6.jpg',
+                    'Project Six',
+                    'A short description of this design project and the goals behind it.'
+                )"
+            >
+
+                <div class="thumbnail">
+
+                    <img
+                        src="images/project-6.jpg"
+                        alt="Project Six"
+                    >
+
+                </div>
+
+
+                <div class="gallery-info">
+
+                    <h3>
+                        Project Six
+                    </h3>
+
+                    <p>
+                        Creative Design
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         FULL-SIZE IMAGE LIGHTBOX
+    ===================================================== -->
+
+    <div
+        id="lightbox"
+        class="lightbox"
+        onclick="closeLightbox(event)"
+    >
+
+        <span
+            class="close-button"
+            onclick="closeLightbox()"
+        >
+            &times;
+        </span>
+
+
+        <div class="lightbox-content">
+
+            <img
+                id="lightbox-image"
+                src=""
+                alt=""
+            >
+
+
+            <h2
+                id="lightbox-title"
+                class="lightbox-title"
+            >
+            </h2>
+
+
+            <p
+                id="lightbox-description"
+                class="lightbox-description"
+            >
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         CONTACT ME
+    ===================================================== -->
+
+    <section class="contact" id="contact">
+
+        <div class="section-label">
+            Contact Me
+        </div>
+
+
+        <h2>
+            Let's create something together.
+        </h2>
+
+
+        <!-- ✏️ CHANGE THIS DESCRIPTION IF YOU WANT -->
+
+        <p>
+            Have ideas for your business? I'd love to hear about it.
+            Get in touch and let's discuss how I can help!
+        </p>
+
+
+        <!-- ✏️ CHANGE YOUR EMAIL ADDRESS HERE -->
+
+        <a
+            href="mailto:teamleader.jeane@gmail.com"
+            class="contact-button"
+        >
+            Email Me
+        </a>
+
+    </section>
+
+
+    <!-- =====================================================
          FOOTER
-    ========================== --><footer>&copy; 2026 Jeane Diaz. All rights reserved.</footer>
+    ===================================================== -->
+
+    <footer>
+
+        <!-- ✏️ CHANGE YOUR NAME HERE -->
+
+        © 2026 Jeane Lopez. All rights reserved.
+
+    </footer>
+
+
+    <!-- =====================================================
+         JAVASCRIPT FOR IMAGE GALLERY
+    ===================================================== -->
+
+    <script>
+
+
+        /* Open the full-size image */
+
+        function openLightbox(image, title, description) {
+
+            document.getElementById("lightbox-image").src = image;
+
+            document.getElementById("lightbox-title").textContent = title;
+
+            document.getElementById("lightbox-description").textContent = description;
+
+            document.getElementById("lightbox").style.display = "block";
+
+            document.body.style.overflow = "hidden";
+
+        }
+
+
+        /* Close the image */
+
+        function closeLightbox(event) {
+
+            /*
+               If the user clicks the image or text,
+               don't close the window.
+            */
+
+            if (
+                event &&
+                event.target !== document.getElementById("lightbox")
+            ) {
+
+                return;
+
+            }
+
+
+            document.getElementById("lightbox").style.display = "none";
+
+            document.body.style.overflow = "auto";
+
+        }
+
+
+        /* Allow the Escape key to close the image */
+
+        document.addEventListener("keydown", function(event) {
+
+            if (event.key === "Escape") {
+
+                document.getElementById("lightbox").style.display = "none";
+
+                document.body.style.overflow = "auto";
+
+            }
+
+        });
+
+
+    </script>
+
+
+</body>
+
+</html>
+```
