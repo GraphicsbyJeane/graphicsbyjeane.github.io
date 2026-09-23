@@ -9,8 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- ✏️ CHANGE YOUR WEBSITE TITLE HERE -->
-    <title>Jeane | Graphic Designer</title>
-
+    <title>Your Name | Graphic Designer</title>
 
     <style>
 
@@ -47,7 +46,7 @@
 
         nav {
             width: 100%;
-            padding: 22px 6%;
+            padding: 20px 6%;
 
             display: flex;
             justify-content: space-between;
@@ -57,8 +56,6 @@
 
             background: #f6f4f0;
         }
-
-        /* ✏️ CHANGE YOUR NAME HERE */
 
         .logo {
             font-size: 1.25rem;
@@ -84,73 +81,101 @@
 
 
         /* =====================================================
-           HERO / FIRST IMPRESSION
+           INTRODUCTION AREA
+           HERO + ABOUT ME SIDE-BY-SIDE
+        ===================================================== */
+
+        .intro {
+
+            max-width: 1400px;
+
+            margin: 0 auto;
+
+            padding: 55px 6% 35px;
+
+            display: grid;
+
+            grid-template-columns: 1.15fr 0.85fr;
+
+            gap: 70px;
+
+            align-items: center;
+        }
+
+
+        /* =====================================================
+           HERO
         ===================================================== */
 
         .hero {
-            min-height: 75vh;
-
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-
-            text-align: center;
-
-            padding: 80px 25px;
+            padding: 30px 0;
         }
 
         .hero-small {
             font-family: Arial, sans-serif;
-            font-size: 0.75rem;
+
+            font-size: 0.7rem;
+
             text-transform: uppercase;
+
             letter-spacing: 4px;
 
             color: #827c75;
 
-            margin-bottom: 20px;
+            margin-bottom: 18px;
         }
 
         .hero h1 {
-            max-width: 950px;
 
-            font-size: clamp(3.5rem, 9vw, 7rem);
+            max-width: 750px;
+
+            font-size: clamp(3.3rem, 6vw, 6rem);
 
             font-weight: normal;
+
             line-height: 0.95;
 
-            letter-spacing: -4px;
+            letter-spacing: -3px;
 
-            margin-bottom: 30px;
+            margin-bottom: 25px;
         }
 
         .hero p {
-            max-width: 580px;
+
+            max-width: 550px;
 
             font-family: Arial, sans-serif;
-            font-size: 1rem;
+
+            font-size: 0.95rem;
 
             color: #6b665f;
         }
 
         .hero-button {
-            margin-top: 35px;
 
-            padding: 13px 30px;
+            display: inline-block;
+
+            margin-top: 28px;
+
+            padding: 12px 28px;
 
             border: 1px solid #292725;
 
             font-family: Arial, sans-serif;
-            font-size: 0.8rem;
+
+            font-size: 0.75rem;
 
             text-transform: uppercase;
+
             letter-spacing: 1px;
 
             transition: all 0.25s ease;
         }
 
         .hero-button:hover {
+
             background: #292725;
+
             color: #f6f4f0;
         }
 
@@ -160,16 +185,18 @@
         ===================================================== */
 
         .about {
-            max-width: 850px;
 
-            margin: auto;
+            padding: 30px 0;
 
-            padding: 100px 30px;
+            text-align: left;
 
-            text-align: center;
+            border-left: 1px solid #ddd9d2;
+
+            padding-left: 55px;
         }
 
         .section-label {
+
             font-family: Arial, sans-serif;
 
             font-size: 0.7rem;
@@ -183,47 +210,52 @@
             margin-bottom: 15px;
         }
 
-        .about h2,
-        .portfolio-heading h2,
-        .contact h2 {
+        .about h2 {
 
-            font-size: 2.7rem;
+            font-size: 2.5rem;
 
             font-weight: normal;
 
             line-height: 1.1;
 
-            margin-bottom: 25px;
+            margin-bottom: 20px;
         }
 
         .about p {
 
-            max-width: 700px;
+            max-width: 550px;
 
-            margin: auto;
-
-            font-size: 1.05rem;
+            font-size: 1rem;
 
             color: #5e5953;
         }
 
 
         /* =====================================================
-           PORTFOLIO GALLERY
+           PORTFOLIO
         ===================================================== */
 
         .portfolio {
 
-            padding: 90px 6% 120px;
-
+            padding: 35px 6% 110px;
         }
 
         .portfolio-heading {
 
             text-align: center;
 
-            margin-bottom: 55px;
+            margin-bottom: 45px;
+        }
 
+        .portfolio-heading h2 {
+
+            font-size: 2.6rem;
+
+            font-weight: normal;
+
+            line-height: 1.1;
+
+            margin-bottom: 15px;
         }
 
         .portfolio-heading p {
@@ -234,14 +266,15 @@
 
             font-family: Arial, sans-serif;
 
-            font-size: 0.9rem;
+            font-size: 0.85rem;
 
             color: #77716a;
-
         }
 
 
-        /* Gallery grid */
+        /* =====================================================
+           GALLERY
+        ===================================================== */
 
         .gallery {
 
@@ -254,20 +287,14 @@
             grid-template-columns: repeat(2, 1fr);
 
             gap: 35px;
-
         }
 
-
-        /* Individual gallery item */
 
         .gallery-item {
 
             cursor: pointer;
-
         }
 
-
-        /* Thumbnail */
 
         .thumbnail {
 
@@ -278,7 +305,6 @@
             overflow: hidden;
 
             background: #e6e1da;
-
         }
 
         .thumbnail img {
@@ -292,30 +318,24 @@
             display: block;
 
             transition: transform 0.5s ease;
-
         }
 
         .gallery-item:hover .thumbnail img {
 
             transform: scale(1.04);
-
         }
 
-
-        /* Text below thumbnail */
 
         .gallery-info {
 
             padding-top: 15px;
-
         }
 
         .gallery-info h3 {
 
-            font-size: 1.25rem;
+            font-size: 1.2rem;
 
             font-weight: normal;
-
         }
 
         .gallery-info p {
@@ -327,7 +347,6 @@
             font-size: 0.75rem;
 
             color: #817b74;
-
         }
 
 
@@ -356,11 +375,7 @@
             padding: 40px;
 
             overflow-y: auto;
-
         }
-
-
-        /* Popup content */
 
         .lightbox-content {
 
@@ -371,9 +386,7 @@
             text-align: center;
 
             color: #f6f4f0;
-
         }
-
 
         .lightbox-content img {
 
@@ -382,9 +395,7 @@
             max-height: 70vh;
 
             object-fit: contain;
-
         }
-
 
         .lightbox-title {
 
@@ -393,9 +404,7 @@
             font-size: 2rem;
 
             font-weight: normal;
-
         }
-
 
         .lightbox-description {
 
@@ -408,11 +417,7 @@
             font-size: 0.9rem;
 
             color: #c8c3bc;
-
         }
-
-
-        /* Close button */
 
         .close-button {
 
@@ -429,20 +434,16 @@
             font-size: 2rem;
 
             cursor: pointer;
-
-            font-weight: normal;
-
         }
 
         .close-button:hover {
 
             opacity: 0.6;
-
         }
 
 
         /* =====================================================
-           CONTACT SECTION
+           CONTACT
         ===================================================== */
 
         .contact {
@@ -453,20 +454,21 @@
 
             text-align: center;
 
-            padding: 120px 25px;
-
+            padding: 110px 25px;
         }
 
         .contact .section-label {
 
             color: #aaa49d;
-
         }
 
         .contact h2 {
 
-            font-size: 3.5rem;
+            font-size: 3.2rem;
 
+            font-weight: normal;
+
+            margin-bottom: 20px;
         }
 
         .contact p {
@@ -478,7 +480,6 @@
             font-family: Arial, sans-serif;
 
             color: #c8c3bc;
-
         }
 
         .contact-button {
@@ -498,7 +499,6 @@
             letter-spacing: 1px;
 
             transition: all 0.25s ease;
-
         }
 
         .contact-button:hover {
@@ -506,7 +506,6 @@
             background: #f6f4f0;
 
             color: #292725;
-
         }
 
 
@@ -527,20 +526,61 @@
             font-family: Arial, sans-serif;
 
             font-size: 0.7rem;
-
         }
 
 
         /* =====================================================
-           MOBILE PHONE DISPLAY
+           MOBILE
         ===================================================== */
+
+        @media (max-width: 850px) {
+
+            .intro {
+
+                grid-template-columns: 1fr;
+
+                gap: 30px;
+
+                padding-top: 45px;
+            }
+
+            .about {
+
+                border-left: none;
+
+                border-top: 1px solid #ddd9d2;
+
+                padding-left: 0;
+
+                padding-top: 35px;
+            }
+
+            .about,
+            .hero {
+
+                text-align: center;
+            }
+
+            .hero p,
+            .about p {
+
+                margin-left: auto;
+
+                margin-right: auto;
+            }
+
+            .portfolio {
+
+                padding-top: 30px;
+            }
+        }
+
 
         @media (max-width: 700px) {
 
             nav {
 
                 padding: 18px 5%;
-
             }
 
             nav ul {
@@ -548,51 +588,60 @@
                 gap: 15px;
 
                 font-size: 0.65rem;
-
             }
 
-            .hero {
+            .intro {
 
-                min-height: 65vh;
+                padding-left: 20px;
 
+                padding-right: 20px;
+
+                padding-bottom: 20px;
             }
 
             .hero h1 {
 
-                letter-spacing: -2px;
+                font-size: clamp(3rem, 13vw, 4.5rem);
 
+                letter-spacing: -2px;
+            }
+
+            .portfolio {
+
+                padding-left: 20px;
+
+                padding-right: 20px;
             }
 
             .gallery {
 
                 grid-template-columns: 1fr;
-
             }
 
             .thumbnail {
 
                 height: 350px;
-
             }
 
             .lightbox {
 
                 padding: 20px;
-
             }
 
             .lightbox-title {
 
                 font-size: 1.5rem;
+            }
 
+            .contact {
+
+                padding: 90px 20px;
             }
 
             .contact h2 {
 
-                font-size: 2.6rem;
-
+                font-size: 2.5rem;
             }
-
         }
 
     </style>
@@ -612,7 +661,7 @@
         <!-- ✏️ CHANGE YOUR NAME HERE -->
 
         <div class="logo">
-            Graphics by Jeane
+            YOUR NAME
         </div>
 
         <ul>
@@ -635,58 +684,72 @@
 
 
     <!-- =====================================================
-         HERO
+         HERO + ABOUT ME
+         These now sit side-by-side
     ===================================================== -->
 
-    <section class="hero">
+    <section class="intro">
 
-        <div class="hero-small">
-            Graphic Designer
+
+        <!-- HERO -->
+
+        <div class="hero">
+
+            <div class="hero-small">
+                Graphic Designer
+            </div>
+
+
+            <!-- ✏️ CHANGE YOUR MAIN HEADLINE HERE -->
+
+            <h1>
+                Design that<br>
+                makes an impression.
+            </h1>
+
+
+            <!-- ✏️ CHANGE YOUR INTRODUCTION HERE -->
+
+            <p>
+                Thoughtful visual design created to help businesses,
+                organizations, and ideas stand out.
+            </p>
+
+
+            <a href="#portfolio" class="hero-button">
+                Explore My Work
+            </a>
+
         </div>
 
 
-        <!-- ✏️ CHANGE YOUR MAIN HEADLINE HERE -->
+        <!-- ABOUT ME -->
 
-        <h1>
-            Let's find your<br>Brand Identity
-        </h1>
+        <div class="about" id="about">
 
-
-        <!-- ✏️ CHANGE YOUR INTRODUCTION HERE -->
-
-        <p>
-            I specialize in helping small business owners find their own custom brand identity. A cohesive brand identity creates a recognizable and professional online presence that builds trust, strengthens credibility, and helps your business stand out. My complete graphic design package includes your own logo, website graphics, company headers, social media icons, business cards, advert design, and more, all custom made based on your preferences and vision for how you want your business to be seen by your potential clients.
-        </p>
+            <div class="section-label">
+                About Me
+            </div>
 
 
-        <a href="#portfolio" class="hero-button">
-            Explore My Work
-        </a>
-
-    </section>
+            <h2>
+                Creativity with purpose.
+            </h2>
 
 
-    <!-- =====================================================
-         ABOUT ME
-    ===================================================== -->
+            <!-- ✏️ CHANGE YOUR ABOUT ME DESCRIPTION HERE -->
 
-    <section class="about" id="about">
+            <p>
+                Hi, I'm <strong>Your Name</strong>, a graphic designer
+                who loves turning ideas into thoughtful and engaging
+                visual experiences. From branding and promotional
+                materials to digital graphics and illustration, I
+                create designs that are both visually compelling and
+                purposeful. My goal is to make every project feel
+                unique, polished, and true to the people behind it.
+            </p>
 
-        <div class="section-label">
-            About Me
         </div>
-
-
-        <h2>
-            Creativity with purpose.
-        </h2>
-
-
-        <!-- ✏️ CHANGE YOUR ABOUT ME DESCRIPTION HERE -->
-
-        <p>
-            Hi, I'm Jeane, a Graphic Design graduate passionate about working with small businesses to help them grow. I enjoy creating thoughtful designs that are both beautiful and purposeful, from branding and promotional materials to digital graphics and illustrations. My goal is to boost traffic to small businesses by creating identifyable branding that fits the mission of each business while helping them make a lasting impression on their clients.
-        </p>
 
     </section>
 
@@ -725,8 +788,6 @@
                  PROJECT 1
             ================================================= -->
 
-            <!-- ✏️ Change the image, title, and description -->
-
             <div
                 class="gallery-item"
                 onclick="openLightbox(
@@ -761,11 +822,7 @@
             </div>
 
 
-            <!-- =================================================
-                 PROJECT 2
-            ================================================= -->
-
-            <!-- ✏️ Change the image, title, and description -->
+            <!-- PROJECT 2 -->
 
             <div
                 class="gallery-item"
@@ -801,9 +858,7 @@
             </div>
 
 
-            <!-- =================================================
-                 PROJECT 3
-            ================================================= -->
+            <!-- PROJECT 3 -->
 
             <div
                 class="gallery-item"
@@ -839,9 +894,7 @@
             </div>
 
 
-            <!-- =================================================
-                 PROJECT 4
-            ================================================= -->
+            <!-- PROJECT 4 -->
 
             <div
                 class="gallery-item"
@@ -877,9 +930,7 @@
             </div>
 
 
-            <!-- =================================================
-                 PROJECT 5
-            ================================================= -->
+            <!-- PROJECT 5 -->
 
             <div
                 class="gallery-item"
@@ -915,9 +966,7 @@
             </div>
 
 
-            <!-- =================================================
-                 PROJECT 6
-            ================================================= -->
+            <!-- PROJECT 6 -->
 
             <div
                 class="gallery-item"
@@ -952,14 +1001,13 @@
 
             </div>
 
-
         </div>
 
     </section>
 
 
     <!-- =====================================================
-         FULL-SIZE IMAGE LIGHTBOX
+         FULL-SIZE IMAGE POPUP
     ===================================================== -->
 
     <div
@@ -984,13 +1032,11 @@
                 alt=""
             >
 
-
             <h2
                 id="lightbox-title"
                 class="lightbox-title"
             >
             </h2>
-
 
             <p
                 id="lightbox-description"
@@ -1022,15 +1068,16 @@
         <!-- ✏️ CHANGE THIS DESCRIPTION IF YOU WANT -->
 
         <p>
-            Have ideas for your business? I'd love to hear about it.
-            Get in touch and let's discuss how I can help!
+            Have a project in mind? I'd love to hear about it.
+            Get in touch and let's discuss how I can help bring
+            your ideas to life.
         </p>
 
 
         <!-- ✏️ CHANGE YOUR EMAIL ADDRESS HERE -->
 
         <a
-            href="mailto:teamleader.jeane@gmail.com"
+            href="mailto:youremail@example.com"
             class="contact-button"
         >
             Email Me
@@ -1047,19 +1094,16 @@
 
         <!-- ✏️ CHANGE YOUR NAME HERE -->
 
-        © 2026 Jeane Lopez. All rights reserved.
+        © 2026 Your Name. All rights reserved.
 
     </footer>
 
 
     <!-- =====================================================
-         JAVASCRIPT FOR IMAGE GALLERY
+         JAVASCRIPT
     ===================================================== -->
 
     <script>
-
-
-        /* Open the full-size image */
 
         function openLightbox(image, title, description) {
 
@@ -1072,37 +1116,23 @@
             document.getElementById("lightbox").style.display = "block";
 
             document.body.style.overflow = "hidden";
-
         }
 
 
-        /* Close the image */
-
         function closeLightbox(event) {
-
-            /*
-               If the user clicks the image or text,
-               don't close the window.
-            */
 
             if (
                 event &&
                 event.target !== document.getElementById("lightbox")
             ) {
-
                 return;
-
             }
-
 
             document.getElementById("lightbox").style.display = "none";
 
             document.body.style.overflow = "auto";
-
         }
 
-
-        /* Allow the Escape key to close the image */
 
         document.addEventListener("keydown", function(event) {
 
@@ -1111,11 +1141,9 @@
                 document.getElementById("lightbox").style.display = "none";
 
                 document.body.style.overflow = "auto";
-
             }
 
         });
-
 
     </script>
 
